@@ -1,0 +1,433 @@
+
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#fff1f5">
+  <title>Happy 3rd Monthsary, Ghaa! 💛🌸</title>
+
+  <!-- Tailwind CSS + daisyUI -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" type="text/css">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Google Material Symbols -->
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,500,1,0" rel="stylesheet">
+
+  <!-- Confetti -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+</head>
+
+<body class="min-h-screen overflow-x-hidden bg-gradient-to-b from-rose-50 via-pink-50 to-pink-100 font-['Poppins'] text-gray-700">
+
+  <!-- Floating Hearts -->
+  <div id="floatingHearts" class="pointer-events-none fixed inset-0 z-0 overflow-hidden" aria-hidden="true"></div>
+
+  <main class="relative z-10 mx-auto flex min-h-screen w-full max-w-5xl flex-col items-center px-5 py-12 sm:py-16">
+
+    <!-- Header -->
+    <div class="flex items-center gap-3 text-xs font-semibold tracking-[0.4em] text-pink-500 sm:text-sm">
+      <span class="material-symbols-rounded">favorite</span>
+      HAPPY
+      <span class="material-symbols-rounded">favorite</span>
+    </div>
+
+    <h1 class="mt-3 text-center font-['Dancing_Script'] text-6xl font-bold leading-tight text-rose-600 sm:text-8xl">
+      3rd Monthsary
+    </h1>
+
+    <div class="mt-3 flex items-center gap-3 text-xs font-medium tracking-[0.2em] text-gray-600 sm:text-sm">
+      <span class="h-px w-8 bg-rose-300 sm:w-16"></span>
+      OCTOBER 28, 2026
+      <span class="h-px w-8 bg-rose-300 sm:w-16"></span>
+    </div>
+
+    <p class="mt-5 text-center text-sm leading-7 text-gray-600 sm:text-base">
+      Happy Disperas, Pangga! 🌸💛
+      <br>
+      <span class="font-['Dancing_Script'] text-2xl font-bold text-rose-500 sm:text-3xl">
+        Forever yours. ❤️
+      </span>
+    </p>
+
+    <!-- Gift Section -->
+    <section class="mt-10 flex w-full flex-col items-center">
+
+      <button id="giftButton" type="button" aria-label="Open your gift"
+        class="group relative flex h-64 w-64 items-center justify-center rounded-full bg-gradient-to-b from-white/90 to-pink-100/70 shadow-[0_20px_60px_rgba(244,114,182,0.18)] transition duration-500 hover:scale-105 sm:h-80 sm:w-80">
+
+        <span class="absolute inset-5 rounded-full border border-pink-200/70"></span>
+
+        <span id="giftEmoji" class="relative z-10 select-none text-[125px] transition duration-500 group-hover:scale-110 sm:text-[160px]">
+          🎁
+        </span>
+
+        <span class="absolute right-9 top-10 text-2xl text-rose-400">♥</span>
+        <span class="absolute bottom-10 left-8 text-xl text-pink-400">♥</span>
+        <span class="absolute left-10 top-14 text-sm text-rose-300">✦</span>
+        <span class="absolute bottom-12 right-10 text-lg text-pink-300">✧</span>
+      </button>
+
+      <p id="giftHint" class="mt-5 text-center text-sm leading-6 text-gray-500">
+        I have something special for you, ghaa... 🥺💛
+      </p>
+
+      <button id="openGift" type="button"
+        class="btn mt-5 rounded-full border-0 bg-gradient-to-r from-rose-500 to-pink-500 px-8 text-white shadow-lg shadow-pink-200 hover:from-rose-600 hover:to-pink-600">
+        <span class="material-symbols-rounded">redeem</span>
+        Click the Gift
+      </button>
+
+      <p class="mt-8 text-xs tracking-wide text-pink-400">
+        Made with all my love, just for you ♡
+      </p>
+    </section>
+
+    <!-- Romantic Intro Card -->
+    <section class="mt-12 w-full rounded-3xl border border-white/90 bg-white/65 p-6 shadow-xl shadow-pink-200/30 sm:p-10">
+      <div class="text-center">
+        <span class="material-symbols-rounded text-4xl text-rose-400">favorite</span>
+
+        <h2 class="mt-3 font-['Dancing_Script'] text-4xl font-bold text-rose-600 sm:text-5xl">
+          To My Favorite Person
+        </h2>
+
+        <p class="mx-auto mt-4 max-w-xl text-sm leading-7 text-gray-600 sm:text-base">
+          Three months of love, happiness, dreams, and memories.
+          This little website is my special gift to you, ghaa.
+          Open your gift and read the words I wrote from my heart. 💛🌸
+        </p>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="mt-10 pb-5 text-center">
+      <p class="font-['Dancing_Script'] text-2xl font-bold text-rose-500">
+        I love you always and forever. 🌹
+      </p>
+      <p class="mt-3 text-xs text-pink-400">
+        October 28, 2026 · Our little love story ♡
+      </p>
+    </footer>
+
+  </main>
+
+  <!-- PASSWORD POPUP -->
+  <dialog id="passwordModal" class="modal">
+    <div class="modal-box relative max-h-[90vh] max-w-sm overflow-y-auto rounded-3xl border border-pink-100 bg-white p-7 text-center shadow-2xl sm:p-9">
+
+      <button id="closePassword" type="button" aria-label="Close"
+        class="btn btn-circle btn-ghost btn-sm absolute right-3 top-3 text-gray-400">
+        ✕
+      </button>
+
+      <div class="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-pink-100 text-rose-500">
+        <span class="material-symbols-rounded text-4xl">lock</span>
+      </div>
+
+      <h2 class="mt-5 font-['Dancing_Script'] text-4xl font-bold text-rose-600">
+        A Secret for You
+      </h2>
+
+      <p class="mt-3 text-sm leading-6 text-gray-500">
+        Enter the special code of our love story to open my letter, ghaa.
+        <span class="text-rose-500">♥</span>
+      </p>
+
+      <form id="passwordForm" class="mt-6">
+        <label for="monthCode" class="sr-only">Our special code</label>
+
+        <input
+          id="monthCode"
+          type="password"
+          inputmode="numeric"
+          maxlength="6"
+          pattern="[0-9]{6}"
+          autocomplete="off"
+          placeholder="• • • • • •"
+          class="input input-bordered h-14 w-full rounded-2xl border-pink-200 bg-pink-50/50 text-center text-xl tracking-[0.5em] focus:border-pink-400 focus:outline-none"
+          required
+        >
+
+        <p id="errorMessage" class="mt-3 hidden text-xs text-rose-500">
+          Try again, my love. Kaya ra nimo! ❤️
+        </p>
+
+        <button type="submit"
+          class="btn mt-5 w-full rounded-2xl border-0 bg-gradient-to-r from-rose-500 to-pink-500 text-white hover:from-rose-600 hover:to-pink-600">
+          <span class="material-symbols-rounded">favorite</span>
+          Unlock My Letter
+        </button>
+      </form>
+
+      <p class="mt-5 text-xs text-pink-300">
+        Just a little secret between us ♡
+      </p>
+    </div>
+
+    <form method="dialog" class="modal-backdrop">
+      <button aria-label="Close password dialog">close</button>
+    </form>
+  </dialog>
+
+  <!-- COMPLETE LOVE LETTER -->
+  <dialog id="letterModal" class="modal">
+    <div class="modal-box max-h-[92vh] max-w-3xl overflow-y-auto rounded-3xl border border-pink-100 bg-white p-6 shadow-2xl sm:p-10 md:p-12">
+
+      <!-- Letter Header -->
+      <div class="text-center">
+        <div class="flex justify-center gap-2 text-2xl text-rose-400">
+          <span>🌸</span>
+          <span>💛</span>
+          <span>🌹</span>
+        </div>
+
+        <p class="mt-4 text-xs font-semibold tracking-[0.3em] text-pink-400">
+          A LETTER FROM MY HEART
+        </p>
+
+        <h2 class="mt-4 font-['Dancing_Script'] text-5xl font-bold text-rose-600 sm:text-6xl">
+          Pangga
+        </h2>
+
+        <p class="mt-3 text-sm text-gray-400">
+          Happy 3rd Monthsary, Ghaa! 💛
+        </p>
+
+        <div class="mx-auto mt-6 h-px w-24 bg-pink-200"></div>
+      </div>
+
+      <!-- Your Original Message -->
+      <article class="mt-8 space-y-6 text-sm leading-8 text-gray-600 sm:text-base sm:leading-9">
+
+        <p class="font-medium text-rose-500">
+          Happy Disperas, ghaa🌸!! Happy 3rd monthsary, ghaa!! 💛🌹
+        </p>
+
+        <p>
+          Thank youuu kaayo, ghaa, sa imong kinabuhi ug sa pag-abot nimo sa akong life. haapppy kaayu ko na ge abut ka sa akung life gha. 🥺💛 Grabe kaayo ka ka-caring ug supportive sa akua, ghaa. Karun lang gyud ko naka-experience ug love nga ing-ani. Kanang love nga murag sobra na ka-perfect, to the point nga usahay dili na ko katuo nga tinuod ni tanan. 😅💛 Mao siguro usahay sige kog doubt sa imong love, bisag wala man unta kay gibuhat nga daotan sa akua. Sorry kaayo, ghaa, kung usahay magduda ko sa imong love. Dili man tungod kay kulang imong gipakita sa akua, pero basin tungod lang pud kay naanad ko nga dili ing-ani ka-perfect ang love nga akong ma-experience. 🥺🌸
+        </p>
+
+        <p>
+          Pero ghaa, gusto nako nga kabalo ka nga dili gyud nako ni sayangan. I really appreciate everything you do for me, imong care, support, patience, ug tanan nimong gipabati sa akua. Thank you kay bisan sa mga times nga mag-overthink ko, naa gihapon ka para sa akua. Wala gyud koy lain nga gusto mopuli sa imong place sa akong life, kay ikaw gyud akong gusto makauban sa akong mga plano sa future. Ikaw akong gusto kauban sa mga butang nga akong pangandoyon karun ug sa mga butang nga atong experienced puhon. 💛🌹
+        </p>
+
+        <p>
+          Sorry kaayo, ghaa, kay karun financially, gamay pa gyud akong money. Wala pa koy tarong ug consistent nga trabaho, ug mao gyud na ang usa sa akong biggest problems karun. Usahay makahuna-huna ko nga gusto na kaayo nako mahatag sa ato ang life nga atong gipangandoy, pero naa pa gyud koy mga butang nga kinahanglan paningkamotan ug ma-improve sa akong kaugalingon. Pero please know nga wala ko nagpasagad sa atong future, ghaa. Ga-lingkamot gyud ko nga makakita ug stable nga trabaho para hinay-hinay nato ma-improve atong life ug dili na kaayo ta maglisod puhon. Dili pa man nako mahatag tanan karun, pero gusto nako nga makita nimo nga seryoso gyud ko sa atong future. 🥺💛
+        </p>
+
+        <p>
+          Gusto gyud nako nga maabot nato ang time nga dili na kaayo ta magproblema sa kwarta, nga makasugod na ta sa next steps sa atong mga plano. Gusto nako nga makatigom ta para sa atong kaugalingong balay, unya sunod, ang atong kasal. 😭💛 Kanang puhon, dili na lang ta magstorya about sa atong dreams kay hinay-hinay na nato silang natuman. Gusto nako nga maabot ang panahon nga makatan-aw ta sa atong kinabuhi unya makaingon ta nga, “Grabe, naagian man diay nato tanan, pero tan-awa ta karun.” 🌸
+        </p>
+
+        <p>
+          I know nga naa pa tay daghang agianan ug daghan pa tang kinahanglan paningkamotan, pero I'm willing to work hard for us, ghaa. Dili man siguro nato makuha tanan dayon, pero basta magtinabangay ta, magtinud-anay, magtinahuray, ug dili kalimtan ang atong mga saad sa usag usa, hinay-hinay ra gyud nato nang maabot. Dili kinahanglan nga perfect ta pirmi, basta willing ta nga magkat-on, mag-improve, ug pilion gihapon ang usag usa bisan naa tay mga challenges sa life 💛🌹
+        </p>
+
+        <p>
+          And ghaa, daghan pa kaayo tag lugar nga gusto nako nga atong maadtoan together. ✈️💛 Gusto nako nga at least once a year, makasuway ta ug laag sa lain-laing places, makakita ug mga nindot nga lugar, makatilaw ug lain-laing foods, ug maghimo ug memories nga ato gyud mahinumdoman puhon. Unta matuman gyud nato atong dream nga makaadto ta sa Japan or Thailand together. 😭💛 Kanang mag-picture ta didto, magkatawa sa atong mga kabuang, ug mag-enjoy sa atong time together nga wala kaayo tay gihunahuna nga problema. Simple ra man siguro na para sa uban, pero para sa akua, dako na kaayo na nga happiness ug achievement kung ma-share nako na nga experience uban nimo. Ang makita lang gyud tika nga malipayon, ghaa, usa na sa mga butang nga makapalipay pud kaayo sa akua. 🌸🌹
+        </p>
+
+        <p>
+          God's timing is always the best, ghaa. 🙏🏻💛 Mag-ampo lang ta ug magpadayon sa atong paningkamot. Dili man nato mahibaw-an kung kanus-a gyud mahitabo tanan, pero I believe nga basta dili ta mohunong sa pagpaningkamot, naa gyud tay maabot. One step at a time lang sa ta, ghaa. Dili nato kinahanglan dali-dalion ang tanan. Ang importante, padayon ta ug magtinabangay sa pag-build sa life nga gusto nato para sa atong kaugalingon. 💛
+        </p>
+
+        <p>
+          Happy 3rd monthsary again, Pangga!! 🌸💛 Thank you kaayo kay naa ka sa akong life, ghaa. Thank you sa imong love, sa imong pag-care sa akua, ug sa pagpabati sa akua nga naa koy someone nga willing mo-support ug mo-love sa akua. I hope nga mas daghan pa tag monthsaries nga magkauban ta, daghan pang memories nga mahimo, daghan pang lugar nga atong maadtoan, ug daghan pang dreams nga atong matuman together. Hangtod sa panahon nga dili na lang ta mag-celebrate ug monthsary kay mag minyu na ta. HAHAHAHAHA! 😭💛🌹
+        </p>
+
+        <p>
+          Imagine ba, ghaa, puhon naa na tay kaugalingong balay, makamata ta kada adlaw nga magkauban, magplano sa atong mga lakaw, magtinabangay sa atong mga responsibilities, ug magpadayon sa atong life as husband and wife. HAHAHAHA, nag-advance na pud kog imagine, pero mao gyud na akong gusto nga future uban nimo. 😭💛
+        </p>
+
+        <p>
+          I love you soooooooooooooooooooooooo muuuuuuuuuuuuch, ghaaaaaaaaaaaaaaaaaaaaaaa🌸!! 💛 Ikaw akong gusto makauban sa akong mga kalisod karun ug sa akong mga kalipay puhon. Ikaw akong gusto kuyog sa mga adlaw nga kapoy ko, sa mga panahon nga daghan kog gihunahuna, ug sa mga adlaw nga naa na tay daghang rason para mag-celebrate. Dili pa perfect akong life karun, ug naa pa koy daghang kinahanglan buhaton para maabot ang atong mga pangandoy, pero I'm doing my best, ghaa, dili lang para sa akong kaugalingon, kundi para pud sa future nga gusto nakong i-share uban nimo. 💛🌸🌹
+        </p>
+
+        <p>
+          Happy Disperas, Pangga!!!! Thank you for being you, ghaa. I hope nga sa matag bulan nga molabay, mas mailhan pa nato ang usag usa, mas molig-on atong pagsinabtanay, ug mas motubo pa atong love. Dili lang karun nga happy ta, kundi bisan sa mga adlaw nga kapoy ta ug naa tay mga problema, unta dili nato kalimtan nganong gipili nato ang usag usa. 🥺💛
+        </p>
+
+      </article>
+
+      <!-- Letter Ending -->
+      <div class="mt-9 rounded-2xl bg-gradient-to-br from-pink-50 to-rose-100/70 p-6 text-center sm:p-8">
+
+        <div class="flex justify-center gap-2 text-2xl">
+          <span>🌸</span>
+          <span>🌹</span>
+          <span>💛</span>
+        </div>
+
+        <p class="mt-5 font-['Dancing_Script'] text-3xl font-bold leading-relaxed text-rose-600 sm:text-4xl">
+          I Love you always and forever yours, Gha!! 🌸🌹💛
+        </p>
+
+        <p class="mt-4 text-sm leading-7 text-gray-600">
+          Forever yours. 😭💋💛🌹🌹🌹
+        </p>
+
+        <div class="mt-5 font-['Dancing_Script'] text-3xl font-bold text-pink-500">
+          Yours, Always. ♡
+        </div>
+      </div>
+
+      <!-- Close Letter -->
+      <button id="closeLetter" type="button"
+        class="btn mt-7 w-full rounded-2xl border-0 bg-gradient-to-r from-rose-500 to-pink-500 text-white hover:from-rose-600 hover:to-pink-600">
+        <span class="material-symbols-rounded">favorite</span>
+        I Love You Too, Pang!
+      </button>
+
+    </div>
+
+    <form method="dialog" class="modal-backdrop">
+      <button aria-label="Close love letter">close</button>
+    </form>
+  </dialog>
+
+  <script>
+    const giftButton = document.getElementById('giftButton');
+    const giftEmoji = document.getElementById('giftEmoji');
+    const openGift = document.getElementById('openGift');
+    const giftHint = document.getElementById('giftHint');
+
+    const passwordModal = document.getElementById('passwordModal');
+    const letterModal = document.getElementById('letterModal');
+
+    const passwordForm = document.getElementById('passwordForm');
+    const monthCode = document.getElementById('monthCode');
+    const errorMessage = document.getElementById('errorMessage');
+
+    let giftOpened = false;
+
+    // Floating hearts
+    const floatingHearts = document.getElementById('floatingHearts');
+
+    for (let i = 0; i < 22; i++) {
+      const heart = document.createElement('span');
+
+      heart.textContent = ['♥', '♡', '❤', '✦'][i % 4];
+      heart.className = 'absolute select-none text-pink-300/40';
+
+      heart.style.left = ((i * 37 + 8) % 95) + '%';
+      heart.style.top = ((i * 53 + 5) % 95) + '%';
+      heart.style.fontSize = (12 + (i % 4) * 7) + 'px';
+
+      floatingHearts.appendChild(heart);
+    }
+
+    // Confetti animation
+    function launchConfetti() {
+      if (typeof confetti !== 'function') return;
+
+      const colors = [
+        '#fb7185',
+        '#f9a8d4',
+        '#fda4af',
+        '#ffffff',
+        '#f472b6',
+        '#fbbf24'
+      ];
+
+      confetti({
+        particleCount: 140,
+        spread: 100,
+        startVelocity: 35,
+        origin: { x: 0.5, y: 0.55 },
+        colors: colors
+      });
+
+      const endTime = Date.now() + 1800;
+
+      function burst() {
+        confetti({
+          particleCount: 4,
+          angle: 60,
+          spread: 60,
+          origin: { x: 0, y: 0.65 },
+          colors: colors
+        });
+
+        confetti({
+          particleCount: 4,
+          angle: 120,
+          spread: 60,
+          origin: { x: 1, y: 0.65 },
+          colors: colors
+        });
+
+        if (Date.now() < endTime) {
+          requestAnimationFrame(burst);
+        }
+      }
+
+      burst();
+    }
+
+    // Open the gift
+    function openTheGift() {
+      if (!giftOpened) {
+        giftOpened = true;
+        giftEmoji.textContent = '💝';
+
+        giftHint.textContent =
+          'Your little surprise is waiting, ghaa! 🥺💛';
+
+        openGift.innerHTML =
+          '<span class="material-symbols-rounded">favorite</span> Open Your Surprise';
+
+        launchConfetti();
+      }
+
+      if (!passwordModal.open) {
+        passwordModal.showModal();
+
+        setTimeout(() => {
+          monthCode.focus();
+        }, 150);
+      }
+    }
+
+    giftButton.addEventListener('click', openTheGift);
+    openGift.addEventListener('click', openTheGift);
+
+    // Close password popup
+    document.getElementById('closePassword').addEventListener('click', () => {
+      passwordModal.close();
+    });
+
+    // Check the special code
+    passwordForm.addEventListener('submit', (event) => {
+      event.preventDefault();
+
+      if (monthCode.value === '083126') {
+        errorMessage.classList.add('hidden');
+
+        passwordModal.close();
+        monthCode.value = '';
+
+        setTimeout(() => {
+          letterModal.showModal();
+          launchConfetti();
+        }, 250);
+
+      } else {
+        errorMessage.classList.remove('hidden');
+        monthCode.value = '';
+        monthCode.focus();
+      }
+    });
+
+    // Close the love letter
+    document.getElementById('closeLetter').addEventListener('click', () => {
+      letterModal.close();
+    });
+  </script>
+
+</body>
+</html>
